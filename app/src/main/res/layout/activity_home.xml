@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    tools:context=".home.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/fl_toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/t_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <com.miguelcatalan.materialsearchview.MaterialSearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:textColorHint="@android:color/darker_gray" />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bncv_home_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toTopOf="@id/bncv_home_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/bncv_home_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bottom_bar_color"
+        android:padding="8dp"
+        app:bnc_mode="spread"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/btv_home_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:bt_active="true"
+            app:bt_colorActive="@color/white"
+            app:bt_colorInactive="@color/material_on_primary_disabled"
+            app:bt_icon="@drawable/ic_movies"
+            app:bt_shape="@drawable/bg_fab"
+            app:bt_title="Movies"
+            app:layout_constraintEnd_toStartOf="@+id/btv_home_tv_shows"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bncv_home_navigation" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/btv_home_tv_shows"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:bt_active="false"
+            app:bt_colorActive="@color/white"
+            app:bt_colorInactive="@color/material_on_primary_disabled"
+            app:bt_icon="@drawable/ic_tv_shows"
+            app:bt_shape="@drawable/bg_fab"
+            app:bt_title="Tv Shows"
+            app:layout_constraintEnd_toStartOf="@+id/btv_home_favorite"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btv_home_movies"
+            app:layout_constraintTop_toTopOf="@id/bncv_home_navigation" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/btv_home_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:bt_active="false"
+            app:bt_colorActive="@color/white"
+            app:bt_colorInactive="@color/material_on_primary_disabled"
+            app:bt_icon="@drawable/ic_favorite"
+            app:bt_shape="@drawable/bg_fab"
+            app:bt_title="Favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btv_home_tv_shows"
+            app:layout_constraintTop_toTopOf="@id/bncv_home_navigation" />
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+</androidx.constraintlayout.widget.ConstraintLayout>

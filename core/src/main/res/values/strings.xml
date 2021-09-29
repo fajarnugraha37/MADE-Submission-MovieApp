@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="popularity_d">Popularity : %s</string>
+    <string name="popularity_detail">Popularity : %s, \nVote Count : %s, \nVote Average : %s</string>
+    <string name="share_title">Bagikan aplikasi ini sekarang.</string>
+    <string name="share_body">Saya sedang melihat info film di Movie App, Download Aplikasi ini Sekarang!!</string>
+    <string name="overview">Overview</string>
+    <string name="popularity">Popularity</string>
+    <string name="share">Share</string>
+    <string name="desc_poster">official psoter</string>
+    <string name="back_button">Navigasi Back Button</string>
+    <string name="icon">icon</string>
+    <string name="poster">poster</string>
+    <string name="favorite">favorite</string>
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="not_found">Data Not Found</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

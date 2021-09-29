@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="popularity_d">Popularity : %s</string>
+    <string name="popularity_detail">Popularity : %s \nVote Count : %s \nVote Average : %s</string>
+    <string name="share_title">Share ke social media.</string>
+    <string name="share_body">\nInfo lengkapnya ada loh di Movie App. \nYuukkk downlad aplikasi ini Sekarang untuk terus update info film dan TV Series!!</string>
+    <string name="overview">Overview</string>
+    <string name="popularity">Popularity</string>
+    <string name="share">Share</string>
+    <string name="desc_poster">posterTopBar</string>
+    <string name="back_button">BackButton</string>
+    <string name="icon">icon</string>
+    <string name="favorite">favorite</string>
+    <string name="not_found">Data TIdak Ditemukan</string>
+    <string name="search">Search</string>
+    <string name="no_data">Data Tidak Tersedia!</string>
+    <string name="resource_error">Terjadi kesalahan, cobalah beberapa saat lagi</string>
+</resources>

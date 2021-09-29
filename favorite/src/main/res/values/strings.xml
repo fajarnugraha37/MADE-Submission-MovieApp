@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="message_undo">Batalkan hapus favorite sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="not_found">Data Tidak Ditemukan</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="no_data">Data Tidak Tersedia</string>
+</resources>
