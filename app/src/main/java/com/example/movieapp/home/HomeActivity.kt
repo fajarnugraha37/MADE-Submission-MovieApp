@@ -48,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
         return try {
             Class.forName(className).newInstance() as Fragment
         } catch (e: Exception) {
-            Toast.makeText(this, "Sorry, module not found", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Sorry, module not found", Toast.LENGTH_SHORT).show()
             null
         }
     }

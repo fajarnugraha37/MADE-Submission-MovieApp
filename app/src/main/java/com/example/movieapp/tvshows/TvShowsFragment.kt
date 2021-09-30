@@ -92,7 +92,7 @@ class TvShowsFragment : Fragment() {
     }
 
     private fun setList(sort: String) {
-        viewModel.getTvShows(sort).observe(this, tvShowsObserver)
+        viewModel.getTvShows(sort).observe(viewLifecycleOwner, tvShowsObserver)
     }
 
     private val tvShowsObserver = Observer<Resource<List<Movie>>> { tvShow ->
