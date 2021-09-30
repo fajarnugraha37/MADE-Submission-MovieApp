@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryColor"
     tools:context=".movies.FavoriteMoviesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,8 +14,8 @@
         tools:listitem="@layout/item_layout_card" />
 
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/fam_favorite_sort"
         android:layout_width="wrap_content"
+        android:id="@+id/fam_favorite_sort"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +49,6 @@
         fab:menu_showShadow="true">
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/tv_favorite_popularity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_star"
@@ -58,10 +56,10 @@
             fab:fab_colorPressed="@color/colorAccentPressed"
             fab:fab_colorRipple="@color/colorAccentPressed"
             fab:fab_label="Popularity"
+            android:id="@+id/fab_favorite_popularity"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fab_favorite_vote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_vote"
@@ -69,13 +67,14 @@
             fab:fab_colorPressed="@color/colorAccentPressed"
             fab:fab_colorRipple="@color/colorAccentPressed"
             fab:fab_label="Vote"
+            android:id="@+id/fab_favorite_vote"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fab_favorite_newest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_date"
+            android:id="@+id/fab_favorite_newest"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorAccentPressed"
             fab:fab_colorRipple="@color/colorAccentPressed"

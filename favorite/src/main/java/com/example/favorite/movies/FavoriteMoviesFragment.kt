@@ -67,7 +67,7 @@ class FavoriteMoviesFragment : Fragment() {
             sort = SortUtils.NEWEST
             setList(sort)
         }
-        binding.tvFavoritePopularity.setOnClickListener {
+        binding.fabFavoritePopularity.setOnClickListener {
             binding.famFavoriteSort.close(true)
             sort = SortUtils.POPULARITY
             setList(sort)
@@ -113,7 +113,7 @@ class FavoriteMoviesFragment : Fragment() {
     })
 
     private fun setList(sort: String) {
-        viewModel.getFavoriteMovies(sort).observe(this, moviesObserver)
+        viewModel.getFavoriteMovies(sort).observe(viewLifecycleOwner, moviesObserver)
     }
 
     private val moviesObserver = Observer<List<Movie>> { movies ->

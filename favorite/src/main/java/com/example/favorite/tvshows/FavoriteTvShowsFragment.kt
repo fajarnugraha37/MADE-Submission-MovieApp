@@ -1,3 +1,5 @@
+@file:Suppress("RedundantWith")
+
 package com.example.favorite.tvshows
 
 import android.content.Intent
@@ -113,7 +115,7 @@ class FavoriteTvShowsFragment : Fragment() {
     })
 
     private fun setList(sort: String) {
-        viewModel.getFavoriteTvShows(sort).observe(this, tvShowsObserver)
+        viewModel.getFavoriteTvShows(sort).observe(viewLifecycleOwner, tvShowsObserver)
     }
 
     private val tvShowsObserver = Observer<List<Movie>> { tvShows ->

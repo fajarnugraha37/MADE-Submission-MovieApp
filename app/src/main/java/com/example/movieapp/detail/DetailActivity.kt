@@ -8,13 +8,10 @@ import com.bumptech.glide.Glide
 import com.example.core.domain.model.Movie
 import com.example.movieapp.R
 import com.example.movieapp.databinding.ActivityDetailBinding
+import com.google.android.material.snackbar.Snackbar
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
-
-    companion object {
-        const val EXTRA_MOVIE = "extra-movie"
-    }
 
     private lateinit var binding: ActivityDetailBinding
     private val viewModel: DetailViewModel by viewModel()
@@ -55,6 +52,12 @@ class DetailActivity : AppCompatActivity() {
                 favoriteState = !favoriteState
                 viewModel.setFavoriteMovie(movie, favoriteState)
                 setFavoriteState(favoriteState)
+
+
+                val message = if (favoriteState) "ditambahkan ke" else "dekeluarkan dari"
+                Snackbar
+                    .make(binding.root, "${movie.title} berhasil $message favorite", Snackbar.LENGTH_SHORT)
+                    .show()
             }
         }
     }
@@ -83,5 +86,9 @@ class DetailActivity : AppCompatActivity() {
                 setText("Tonton ${movie.title} yukk, ${getString(R.string.share_body)}")
                 startChooser()
             }
+    }
+
+    companion object {
+        const val EXTRA_MOVIE = "extra-movie"
     }
 }

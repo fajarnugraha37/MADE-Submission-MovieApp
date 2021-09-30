@@ -22,8 +22,24 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "api_url", "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", "api_key", "\"ce644ddbe47d2abbcecbcefb6b509d96\""
+            buildConfigField "String", "pass_phrase", "\"example\""
+            buildConfigField "String", "host_name", "\"api.themoviedb.org\""
+            buildConfigField "String", "pins", "\"sha256/+vqZVAzTqUP8BGkfl88yU7SQ3C8J2uNEa55B7RZjEg0=\""
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "api_url", "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", "api_key", "\"ce644ddbe47d2abbcecbcefb6b509d96\""
+            buildConfigField "String", "pass_phrase", "\"example\""
+            buildConfigField "String", "host_name", "\"api.themoviedb.org\""
+            buildConfigField "String", "pins", "\"sha256/+vqZVAzTqUP8BGkfl88yU7SQ3C8J2uNEa55B7RZjEg0=\""
         }
     }
 
@@ -48,6 +64,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     androidTestImplementation "androidx.room:room-testing:$room_version"
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
 
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
