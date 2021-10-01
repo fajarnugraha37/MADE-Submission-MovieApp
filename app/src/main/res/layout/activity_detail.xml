@@ -5,7 +5,6 @@
     android:id="@+id/nsv_detail_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryColor"
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".detail.DetailActivity">
 

@@ -78,8 +78,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun onShare(movie: Movie) {
         val mimeType = "text/plain"
-        ShareCompat.IntentBuilder
-            .from(this)
+        ShareCompat.IntentBuilder(this)
             .apply {
                 setType(mimeType)
                 setChooserTitle(getString(R.string.share_title))
